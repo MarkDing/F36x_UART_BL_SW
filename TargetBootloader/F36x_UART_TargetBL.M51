@@ -1,0 +1,691 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                                    05/13/2013  13:55:59  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\Fxxx_TargetBL_Commands.obj, 
+>> C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\Fxxx_TargetBL_Main.obj, C:\Users\mading\SkyDrive\W
+>> ork\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_TargetBL_Startup.obj, C:\Users\mading\SkyDrive\Work\F360-bootloader\F36
+>> x_UART_BL_SW\TargetBootloader\F36x_Comm_UART.obj, C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\
+>> F36x_CRC.obj, C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_Flash.obj, C:\Users\mading\SkyD
+>> rive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_TargetBL_DevSpecific.obj TO C:\Users\mading\SkyDrive\Work\F360-bo
+>> otloader\F36x_UART_BL_SW\TargetBootloader\F36x_UART_TargetBL RS (256) PL (68) PW (132)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\Fxxx_TargetBL_Commands.obj (FXXX_TARGETBL_COMMANDS)
+>> 
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\Fxxx_TargetBL_Main.obj (FXXX_TARGETBL_MAIN)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_TargetBL_Startup.obj (?C_STARTUP)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_Comm_UART.obj (F36X_COMM_UART)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_CRC.obj (F36X_CRC)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_Flash.obj (F36X_FLASH)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_TargetBL_DevSpecific.obj (F36X_TARGETBL_DEVSPE
+>> CIFIC)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+
+
+LINK MAP OF MODULE:  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_UART_TargetBL (FXXX_TARGETB
+>> L_COMMANDS)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0024H     UNIT         ?DT?FXXX_TARGETBL_MAIN
+            DATA    002CH     0013H     UNIT         ?DT?F36X_COMM_UART
+            DATA    003FH     0009H     UNIT         _DATA_GROUP_
+            DATA    0048H     0002H     UNIT         ?DT?FXXX_TARGETBL_COMMANDS
+            IDATA   004AH     0001H     UNIT         ?STACK
+
+            * * * * * * *  X D A T A   M E M O R Y  * * * * * * *
+            XDATA   0000H     0400H     UNIT         ?XD?FXXX_TARGETBL_MAIN
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0002H     ABSOLUTE     
+                    0002H     0001H                  *** GAP ***
+            CODE    0003H     0002H     ABSOLUTE     
+            CODE    0005H     0004H     INBLOCK      ?PR?DISABLE_WATCHDOG?F36X_TARGETBL_DEVSPECIFIC
+                    0009H     0002H                  *** GAP ***
+            CODE    000BH     0002H     ABSOLUTE     
+                    000DH     0006H                  *** GAP ***
+            CODE    0013H     0002H     ABSOLUTE     
+                    0015H     0006H                  *** GAP ***
+            CODE    001BH     0002H     ABSOLUTE     
+                    001DH     0006H                  *** GAP ***
+            CODE    0023H     0002H     ABSOLUTE     
+                    0025H     0006H                  *** GAP ***
+            CODE    002BH     0002H     ABSOLUTE     
+                    002DH     0006H                  *** GAP ***
+            CODE    0033H     0002H     ABSOLUTE     
+                    0035H     0006H                  *** GAP ***
+            CODE    003BH     0002H     ABSOLUTE     
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 2
+
+
+            CODE    003DH     000DH     INBLOCK      ?PR?PORT_INIT?F36X_TARGETBL_DEVSPECIFIC
+                    004AH     0001H                  *** GAP ***
+            CODE    004BH     0002H     ABSOLUTE     
+                    004DH     0006H                  *** GAP ***
+            CODE    0053H     0002H     ABSOLUTE     
+                    0055H     0006H                  *** GAP ***
+            CODE    005BH     0002H     ABSOLUTE     
+                    005DH     0006H                  *** GAP ***
+            CODE    0063H     0002H     ABSOLUTE     
+            CODE    0065H     000AH     INBLOCK      ?PR?OSCILLATOR_INIT?F36X_TARGETBL_DEVSPECIFIC
+                    006FH     0004H                  *** GAP ***
+            CODE    0073H     0002H     ABSOLUTE     
+            CODE    0075H     00AFH     INBLOCK      ?PR?MAIN?FXXX_TARGETBL_MAIN
+            CODE    0124H     0085H     UNIT         ?C_C51STARTUP
+            CODE    01A9H     0040H     INBLOCK      ?PR?_TGT_WRITE_FLASH?FXXX_TARGETBL_COMMANDS
+            CODE    01E9H     003BH     UNIT         ?C?LIB_CODE
+            CODE    0224H     0034H     INBLOCK      ?PR?_GET_BUF_CRC?F36X_CRC
+            CODE    0258H     002DH     INBLOCK      ?PR?_SRC_VALIDATE_RESPONSE?FXXX_TARGETBL_MAIN
+            CODE    0285H     0028H     INBLOCK      ?PR?_FLASH_MODIFY?F36X_FLASH
+            CODE    02ADH     0024H     INBLOCK      ?PR?_SRC_GET_PAGE?F36X_COMM_UART
+            CODE    02D1H     0024H     INBLOCK      ?PR?_UPDATE_CRC?F36X_CRC
+            CODE    02F5H     0021H     INBLOCK      ?PR?_UART_RECEIVE?F36X_COMM_UART
+            CODE    0316H     001FH     UNIT         ?C_INITSEG
+            CODE    0335H     001EH     INBLOCK      ?PR?_UART_SEND?F36X_COMM_UART
+            CODE    0353H     0018H     INBLOCK      ?PR?SRC_GET_PAGE_INFO?F36X_COMM_UART
+            CODE    036BH     0018H     INBLOCK      ?PR?UART0_INIT?F36X_TARGETBL_DEVSPECIFIC
+            CODE    0383H     0014H     INBLOCK      ?PR?_SRC_DISP_INFO_CODE?F36X_COMM_UART
+            CODE    0397H     0014H     INBLOCK      ?PR?F36X_COMM_UART
+            CODE    03ABH     0012H     INBLOCK      ?PR?SRC_GET_INFO?F36X_COMM_UART
+            CODE    03BDH     0012H     INBLOCK      ?PR?DEVICE_INIT?F36X_TARGETBL_DEVSPECIFIC
+            CODE    03CFH     0011H     INBLOCK      ?PR?SRC_DISP_TGT_INFO?F36X_COMM_UART
+            CODE    03E0H     0007H     INBLOCK      ?PR?_TGT_ERASE_PAGE?FXXX_TARGETBL_COMMANDS
+
+
+
+OVERLAY MAP OF MODULE:   C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_UART_TargetBL (FXXX_TAR
+>> GETBL_COMMANDS)
+
+
+SEGMENT                                            DATA_GROUP 
+  +--> CALLED SEGMENT                            START    LENGTH
+----------------------------------------------------------------
+?C_C51STARTUP                                    -----    -----
+  +--> ?PR?MAIN?FXXX_TARGETBL_MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?FXXX_TARGETBL_MAIN                      003FH    0002H
+  +--> ?PR?DEVICE_INIT?F36X_TARGETBL_DEVSPEC...
+  +--> ?PR?SRC_DISP_TGT_INFO?F36X_COMM_UART
+  +--> ?PR?SRC_GET_INFO?F36X_COMM_UART
+  +--> ?PR?_SRC_VALIDATE_RESPONSE?FXXX_TARGE...
+  +--> ?PR?SRC_GET_PAGE_INFO?F36X_COMM_UART
+  +--> ?PR?_SRC_GET_PAGE?F36X_COMM_UART
+  +--> ?PR?_TGT_ERASE_PAGE?FXXX_TARGETBL_COM...
+  +--> ?PR?_TGT_WRITE_FLASH?FXXX_TARGETBL_CO...
+  +--> ?PR?_SRC_DISP_INFO_CODE?F36X_COMM_UART
+
+?PR?DEVICE_INIT?F36X_TARGETBL_DEVSPEC...         0041H    0001H
+  +--> ?PR?DISABLE_WATCHDOG?F36X_TARGETBL_DE...
+  +--> ?PR?OSCILLATOR_INIT?F36X_TARGETBL_DEV...
+  +--> ?PR?PORT_INIT?F36X_TARGETBL_DEVSPECIFIC
+  +--> ?PR?UART0_INIT?F36X_TARGETBL_DEVSPECIFIC
+
+?PR?SRC_DISP_TGT_INFO?F36X_COMM_UART             0041H    0001H
+  +--> ?PR?_UART_SEND?F36X_COMM_UART
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 3
+
+
+  +--> ?PR?F36X_COMM_UART
+  +--> ?PR?_UART_RECEIVE?F36X_COMM_UART
+
+?PR?_UART_SEND?F36X_COMM_UART                    0044H    0003H
+
+?PR?_UART_RECEIVE?F36X_COMM_UART                 0044H    0003H
+
+?PR?SRC_GET_INFO?F36X_COMM_UART                  0041H    0001H
+  +--> ?PR?_UART_SEND?F36X_COMM_UART
+  +--> ?PR?F36X_COMM_UART
+  +--> ?PR?_UART_RECEIVE?F36X_COMM_UART
+
+?PR?_SRC_VALIDATE_RESPONSE?FXXX_TARGE...         -----    -----
+  +--> ?PR?_GET_BUF_CRC?F36X_CRC
+
+?PR?_GET_BUF_CRC?F36X_CRC                        0041H    0007H
+  +--> ?PR?_UPDATE_CRC?F36X_CRC
+
+?PR?SRC_GET_PAGE_INFO?F36X_COMM_UART             0041H    0001H
+  +--> ?PR?_UART_SEND?F36X_COMM_UART
+  +--> ?PR?_UART_RECEIVE?F36X_COMM_UART
+
+?PR?_SRC_GET_PAGE?F36X_COMM_UART                 0041H    0003H
+  +--> ?PR?_UART_SEND?F36X_COMM_UART
+  +--> ?PR?F36X_COMM_UART
+  +--> ?PR?_UART_RECEIVE?F36X_COMM_UART
+
+?PR?_TGT_ERASE_PAGE?FXXX_TARGETBL_COM...         -----    -----
+  +--> ?PR?_FLASH_MODIFY?F36X_FLASH
+
+?PR?_TGT_WRITE_FLASH?FXXX_TARGETBL_CO...         0041H    0006H
+  +--> ?PR?_FLASH_MODIFY?F36X_FLASH
+
+?PR?_SRC_DISP_INFO_CODE?F36X_COMM_UART           -----    -----
+  +--> ?PR?_UART_SEND?F36X_COMM_UART
+  +--> ?PR?F36X_COMM_UART
+  +--> ?PR?_UART_RECEIVE?F36X_COMM_UART
+
+
+
+SYMBOL TABLE OF MODULE:  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\TargetBootloader\F36x_UART_TargetBL (FXXX_TAR
+>> GETBL_COMMANDS)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FXXX_TARGETBL_COMMANDS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:008FH         PUBLIC        PSCTL
+  C:03E0H         PUBLIC        _TGT_Erase_Page
+  D:0048H         PUBLIC        Flash_Key0
+  D:0049H         PUBLIC        Flash_Key1
+  C:01A9H         PUBLIC        _TGT_Write_Flash
+  -------         PROC          _TGT_ERASE_PAGE
+  D:0006H         SYMBOL        Addr
+  C:03E0H         LINE#         74
+  C:03E0H         LINE#         75
+  C:03E0H         LINE#         76
+  C:03E3H         LINE#         77
+  -------         ENDPROC       _TGT_ERASE_PAGE
+  -------         PROC          _TGT_WRITE_FLASH
+  D:0006H         SYMBOL        buf
+  D:0041H         SYMBOL        addr
+  -------         DO            
+  D:0043H         SYMBOL        ptr
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 4
+
+
+  D:0045H         SYMBOL        count
+  -------         ENDDO         
+  C:01A9H         LINE#         89
+  C:01ADH         LINE#         90
+  C:01ADH         LINE#         91
+  C:01B1H         LINE#         92
+  C:01B7H         LINE#         94
+  C:01C4H         LINE#         95
+  C:01C4H         LINE#         96
+  C:01C7H         LINE#         97
+  C:01E6H         LINE#         98
+  C:01E8H         LINE#         99
+  -------         ENDPROC       _TGT_WRITE_FLASH
+  -------         ENDMOD        FXXX_TARGETBL_COMMANDS
+
+  -------         MODULE        FXXX_TARGETBL_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0008H         PUBLIC        SRC_Page_CRC
+  D:000AH         PUBLIC        Last_Error
+  D:000BH         PUBLIC        rx_buf
+  D:002BH         PUBLIC        SRC_Response
+  C:0075H         PUBLIC        main
+  C:0258H         PUBLIC        _SRC_Validate_Response
+  B:00B0H.0       PUBLIC        BL_Override_Pin
+  D:00EFH         PUBLIC        RSTSRC
+  X:0000H         PUBLIC        Page_Buf
+  -------         PROC          MAIN
+  -------         DO            
+  D:0007H         SYMBOL        device_mode
+  D:0004H         SYMBOL        codeptr
+  D:003FH         SYMBOL        page_addr
+  C:0113H         SYMBOL        error
+  -------         ENDDO         
+  C:0075H         LINE#         64
+  C:0075H         LINE#         65
+  C:0075H         LINE#         66
+  C:0077H         LINE#         68
+  C:007CH         LINE#         73
+  C:0080H         LINE#         76
+  C:009AH         LINE#         77
+  C:009AH         LINE#         78
+  C:009BH         LINE#         79
+  C:009BH         LINE#         80
+  C:00A8H         LINE#         81
+  C:00A8H         LINE#         82
+  C:00AAH         LINE#         83
+  C:00AAH         LINE#         86
+  C:00ADH         LINE#         87
+  C:00ADH         LINE#         89
+  C:00AFH         LINE#         90
+  C:00AFH         LINE#         95
+  C:00B1H         LINE#         100
+  C:00B1H         LINE#         101
+  C:00B1H         LINE#         102
+  C:00B6H         LINE#         103
+  C:00BAH         LINE#         104
+  C:00BEH         LINE#         105
+  C:00C2H         LINE#         106
+  C:00C2H         LINE#         107
+  C:00C5H         LINE#         108
+  C:00C8H         LINE#         109
+  C:00C8H         LINE#         110
+  C:00C8H         LINE#         111
+  C:00CCH         LINE#         112
+  C:00D4H         LINE#         113
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 5
+
+
+  C:00DCH         LINE#         114
+  C:00E2H         LINE#         115
+  C:00E6H         LINE#         116
+  C:00E6H         LINE#         118
+  C:00ECH         LINE#         119
+  C:00ECH         LINE#         120
+  C:00F4H         LINE#         121
+  C:00F8H         LINE#         122
+  C:00FCH         LINE#         123
+  C:00FCH         LINE#         124
+  C:0102H         LINE#         125
+  C:010CH         LINE#         127
+  C:010EH         LINE#         129
+  C:0111H         LINE#         130
+  C:0113H         LINE#         131
+  C:0113H         LINE#         132
+  C:0117H         LINE#         133
+  C:0117H         LINE#         134
+  C:011CH         LINE#         135
+  C:011FH         LINE#         136
+  C:011FH         LINE#         137
+  C:0122H         LINE#         138
+  -------         ENDPROC       MAIN
+  -------         PROC          _SRC_VALIDATE_RESPONSE
+  D:0007H         SYMBOL        response
+  D:0005H         SYMBOL        command
+  -------         DO            
+  D:0006H         SYMBOL        buf_crc
+  -------         ENDDO         
+  C:0258H         LINE#         151
+  C:0258H         LINE#         152
+  C:0258H         LINE#         155
+  C:0262H         LINE#         156
+  C:0262H         LINE#         157
+  C:0266H         LINE#         159
+  C:0266H         LINE#         160
+  C:026BH         LINE#         161
+  C:026BH         LINE#         162
+  C:026BH         LINE#         163
+  C:026BH         LINE#         164
+  C:026BH         LINE#         165
+  C:026BH         LINE#         166
+  C:0277H         LINE#         167
+  C:0281H         LINE#         168
+  C:0281H         LINE#         169
+  C:0284H         LINE#         170
+  C:0284H         LINE#         171
+  C:0284H         LINE#         172
+  C:0284H         LINE#         173
+  C:0284H         LINE#         174
+  C:0284H         LINE#         175
+  -------         ENDPROC       _SRC_VALIDATE_RESPONSE
+  -------         ENDMOD        FXXX_TARGETBL_MAIN
+
+  -------         MODULE        ?C_STARTUP
+  C:0124H         SEGMENT       ?C_C51STARTUP
+  I:004AH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  N:0400H         PUBLIC        START_APPLICATION
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0008H         SYMBOL        HW_INTVEC_SEPARATION
+  N:0003H         SYMBOL        HW_INTVEC_TABLE
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 6
+
+
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0000H         SYMBOL        IDATALEN
+  N:0003H         SYMBOL        INTVEC_SEPARATION
+  N:0403H         SYMBOL        INTVEC_TABLE
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0124H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0003H         LINE#         165
+  C:000BH         LINE#         168
+  C:0013H         LINE#         171
+  C:001BH         LINE#         174
+  C:0023H         LINE#         177
+  C:002BH         LINE#         180
+  C:0033H         LINE#         183
+  C:003BH         LINE#         186
+  C:004BH         LINE#         192
+  C:0053H         LINE#         195
+  C:005BH         LINE#         198
+  C:0063H         LINE#         201
+  C:0073H         LINE#         207
+  C:0000H         LINE#         228
+  C:0124H         LINE#         287
+  C:0127H         LINE#         298
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        F36X_COMM_UART
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:02F5H         PUBLIC        _uart_receive
+  C:03CFH         PUBLIC        SRC_Disp_TGT_Info
+  C:0383H         PUBLIC        _SRC_Disp_Info_Code
+  C:0353H         PUBLIC        SRC_Get_Page_Info
+  D:002CH         PUBLIC        TGT_BL_InfoBlock
+  C:02ADH         PUBLIC        _SRC_Get_Page
+  C:0335H         PUBLIC        _uart_send
+  B:0098H.0       PUBLIC        RI0
+  B:0098H.1       PUBLIC        TI0
+  C:03ABH         PUBLIC        SRC_Get_Info
+  D:0099H         PUBLIC        SBUF0
+  C:0397H         SYMBOL        Com0012
+  C:0397H         SYMBOL        L?0019
+  C:03A0H         SYMBOL        L?0020
+  C:03A4H         SYMBOL        L?0021
+  -------         PROC          COM0012
+  -------         ENDPROC       COM0012
+  -------         PROC          SRC_GET_INFO
+  -------         DO            
+  D:0041H         SYMBOL        cmd
+  -------         ENDDO         
+  C:03ABH         LINE#         112
+  C:03ABH         LINE#         113
+  C:03ABH         LINE#         114
+  C:03AEH         LINE#         118
+  C:03B4H         LINE#         134
+  C:03BAH         LINE#         136
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 7
+
+
+  C:03BCH         LINE#         137
+  -------         ENDPROC       SRC_GET_INFO
+  -------         PROC          SRC_GET_PAGE_INFO
+  -------         DO            
+  D:0041H         SYMBOL        cmd
+  -------         ENDDO         
+  C:0353H         LINE#         149
+  C:0353H         LINE#         150
+  C:0353H         LINE#         151
+  C:0356H         LINE#         155
+  C:035CH         LINE#         165
+  C:0368H         LINE#         167
+  C:036AH         LINE#         168
+  -------         ENDPROC       SRC_GET_PAGE_INFO
+  -------         PROC          _SRC_GET_PAGE
+  D:0041H         SYMBOL        buf
+  -------         DO            
+  D:0043H         SYMBOL        cmd
+  -------         ENDDO         
+  C:02ADH         LINE#         180
+  C:02B1H         LINE#         181
+  C:02B1H         LINE#         182
+  C:02B4H         LINE#         185
+  C:02BAH         LINE#         191
+  C:02BEH         LINE#         192
+  C:02CAH         LINE#         193
+  C:02CEH         LINE#         195
+  C:02D0H         LINE#         196
+  -------         ENDPROC       _SRC_GET_PAGE
+  -------         PROC          SRC_DISP_TGT_INFO
+  -------         DO            
+  D:0041H         SYMBOL        cmd
+  -------         ENDDO         
+  C:03CFH         LINE#         208
+  C:03CFH         LINE#         209
+  C:03CFH         LINE#         214
+  C:03D5H         LINE#         218
+  C:03DDH         LINE#         221
+  C:03DFH         LINE#         222
+  -------         ENDPROC       SRC_DISP_TGT_INFO
+  -------         PROC          _SRC_DISP_INFO_CODE
+  D:0007H         SYMBOL        info_code
+  C:0383H         LINE#         234
+  C:0383H         LINE#         235
+  C:0383H         LINE#         240
+  C:0386H         LINE#         241
+  C:0388H         LINE#         242
+  C:038EH         LINE#         246
+  C:0394H         LINE#         247
+  C:0396H         LINE#         248
+  -------         ENDPROC       _SRC_DISP_INFO_CODE
+  -------         PROC          _UART_SEND
+  D:0007H         SYMBOL        buf
+  D:0005H         SYMBOL        count
+  -------         DO            
+  D:0044H         SYMBOL        ptr
+  -------         ENDDO         
+  C:0335H         LINE#         255
+  C:0335H         LINE#         256
+  C:0335H         LINE#         257
+  C:033FH         LINE#         258
+  C:033FH         LINE#         259
+  C:034BH         LINE#         260
+  C:034EH         LINE#         261
+  C:0350H         LINE#         262
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 8
+
+
+  C:0352H         LINE#         263
+  -------         ENDPROC       _UART_SEND
+  -------         PROC          _UART_RECEIVE
+  D:0001H         SYMBOL        buf
+  D:0004H         SYMBOL        count
+  -------         DO            
+  D:0044H         SYMBOL        ptr
+  -------         ENDDO         
+  C:02F5H         LINE#         266
+  C:02F5H         LINE#         267
+  C:02F5H         LINE#         268
+  C:02FBH         LINE#         269
+  C:02FBH         LINE#         270
+  C:02FEH         LINE#         271
+  C:02FEH         LINE#         272
+  C:030AH         LINE#         273
+  C:030CH         LINE#         274
+  C:0311H         LINE#         275
+  C:0311H         LINE#         276
+  C:0315H         LINE#         277
+  -------         ENDPROC       _UART_RECEIVE
+  -------         ENDMOD        F36X_COMM_UART
+
+  -------         MODULE        F36X_CRC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:02D1H         PUBLIC        _Update_CRC
+  C:0224H         PUBLIC        _Get_Buf_CRC
+  -------         PROC          _GET_BUF_CRC
+  D:0041H         SYMBOL        ptr
+  D:0044H         SYMBOL        numbytes
+  -------         DO            
+  D:0046H         SYMBOL        i
+  D:0006H         SYMBOL        CRC
+  -------         ENDDO         
+  C:0224H         LINE#         39
+  C:022EH         LINE#         40
+  C:022EH         LINE#         43
+  C:0231H         LINE#         46
+  C:0240H         LINE#         47
+  C:0240H         LINE#         48
+  C:024DH         LINE#         49
+  C:0257H         LINE#         51
+  C:0257H         LINE#         52
+  -------         ENDPROC       _GET_BUF_CRC
+  -------         PROC          _UPDATE_CRC
+  D:0006H         SYMBOL        crc
+  D:0005H         SYMBOL        newbyte
+  -------         DO            
+  D:0005H         SYMBOL        i
+  -------         ENDDO         
+  C:02D1H         LINE#         65
+  C:02D1H         LINE#         66
+  C:02D1H         LINE#         70
+  C:02D4H         LINE#         72
+  C:02D6H         LINE#         73
+  C:02D6H         LINE#         74
+  C:02DAH         LINE#         75
+  C:02DAH         LINE#         76
+  C:02E1H         LINE#         77
+  C:02E7H         LINE#         78
+  C:02E9H         LINE#         80
+  C:02E9H         LINE#         81
+  C:02F0H         LINE#         82
+  C:02F0H         LINE#         83
+  C:02F4H         LINE#         84
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 9
+
+
+  C:02F4H         LINE#         85
+  -------         ENDPROC       _UPDATE_CRC
+  -------         ENDMOD        F36X_CRC
+
+  -------         MODULE        F36X_FLASH
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:008FH         PUBLIC        PSCTL
+  D:00FFH         PUBLIC        VDM0CN
+  C:0285H         PUBLIC        _FLASH_Modify
+  D:00EFH         PUBLIC        RSTSRC
+  D:00B7H         PUBLIC        FLKEY
+  -------         PROC          _FLASH_MODIFY
+  D:0082H         SYMBOL        addr
+  D:0005H         SYMBOL        byte
+  C:0285H         LINE#         80
+  C:0289H         LINE#         81
+  C:0289H         LINE#         88
+  C:029BH         LINE#         89
+  C:029BH         LINE#         91
+  C:029BH         LINE#         92
+  C:029EH         LINE#         93
+  C:02A1H         LINE#         95
+  C:02A4H         LINE#         96
+  C:02A7H         LINE#         97
+  C:02A9H         LINE#         98
+  C:02ACH         LINE#         99
+  -------         ENDPROC       _FLASH_MODIFY
+  -------         ENDMOD        F36X_FLASH
+
+  -------         MODULE        F36X_TARGETBL_DEVSPECIFIC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A7H         PUBLIC        SFRPAGE
+  D:00A4H         PUBLIC        P0MDOUT
+  D:00AFH         PUBLIC        P3MDOUT
+  D:00D9H         PUBLIC        PCA0MD
+  D:00E1H         PUBLIC        XBR0
+  D:00E2H         PUBLIC        XBR1
+  D:00FFH         PUBLIC        VDM0CN
+  D:0089H         PUBLIC        TMOD
+  C:003DH         PUBLIC        PORT_Init
+  D:00B7H         PUBLIC        OSCICN
+  C:03BDH         PUBLIC        Device_Init
+  D:008DH         PUBLIC        TH1
+  C:0005H         PUBLIC        Disable_Watchdog
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  D:00EFH         PUBLIC        RSTSRC
+  C:036BH         PUBLIC        UART0_Init
+  D:0098H         PUBLIC        SCON0
+  D:008EH         PUBLIC        CKCON
+  C:0065H         PUBLIC        OSCILLATOR_Init
+  -------         PROC          DISABLE_WATCHDOG
+  C:0005H         LINE#         66
+  C:0005H         LINE#         67
+  C:0005H         LINE#         68
+  C:0008H         LINE#         69
+  -------         ENDPROC       DISABLE_WATCHDOG
+  -------         PROC          DEVICE_INIT
+  -------         DO            
+  D:0041H         SYMBOL        SFRPAGE_save
+  -------         ENDDO         
+  C:03BDH         LINE#         71
+  C:03BDH         LINE#         72
+  C:03BDH         LINE#         74
+  C:03BFH         LINE#         76
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 10
+
+
+  C:03C2H         LINE#         77
+  C:03C5H         LINE#         79
+  C:03C7H         LINE#         80
+  C:03C9H         LINE#         81
+  C:03CBH         LINE#         83
+  C:03CEH         LINE#         84
+  -------         ENDPROC       DEVICE_INIT
+  -------         PROC          OSCILLATOR_INIT
+  C:0065H         LINE#         97
+  C:0065H         LINE#         98
+  C:0065H         LINE#         100
+  C:0068H         LINE#         101
+  C:006BH         LINE#         102
+  C:006EH         LINE#         103
+  -------         ENDPROC       OSCILLATOR_INIT
+  -------         PROC          PORT_INIT
+  C:003DH         LINE#         121
+  C:003DH         LINE#         122
+  C:003DH         LINE#         124
+  C:0040H         LINE#         125
+  C:0043H         LINE#         127
+  C:0046H         LINE#         128
+  C:0049H         LINE#         129
+  -------         ENDPROC       PORT_INIT
+  -------         PROC          UART0_INIT
+  C:036BH         LINE#         141
+  C:036BH         LINE#         142
+  C:036BH         LINE#         143
+  C:036EH         LINE#         148
+  C:036EH         LINE#         149
+  C:036EH         LINE#         150
+  C:0371H         LINE#         151
+  C:0374H         LINE#         152
+  C:0377H         LINE#         153
+  C:0377H         LINE#         154
+  C:0377H         LINE#         155
+  C:0377H         LINE#         156
+  C:0377H         LINE#         157
+  C:0377H         LINE#         158
+  C:0377H         LINE#         159
+  C:0377H         LINE#         160
+  C:0377H         LINE#         161
+  C:0377H         LINE#         162
+  C:0377H         LINE#         163
+  C:0377H         LINE#         164
+  C:0377H         LINE#         166
+  C:0377H         LINE#         167
+  C:0377H         LINE#         168
+  C:0377H         LINE#         169
+  C:0377H         LINE#         170
+  C:0377H         LINE#         172
+  C:037AH         LINE#         173
+  C:037DH         LINE#         174
+  C:0380H         LINE#         175
+  C:0382H         LINE#         176
+  -------         ENDPROC       UART0_INIT
+  -------         ENDMOD        F36X_TARGETBL_DEVSPECIFIC
+
+  -------         MODULE        ?C?CLDPTR
+  C:01E9H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0202H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+BL51 BANKED LINKER/LOCATER V6.22                                                                  05/13/2013  13:55:59  PAGE 11
+
+
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0214H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+Program Size: data=75.0 xdata=1024 code=937
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,193 @@
+BL51 BANKED LINKER/LOCATER V6.22              05/13/2013  13:06:25  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UA
+>> RT_BL_SW\Sample_User_Application\STARTUP.obj, C:\Users\mading\SkyDrive\Work
+>> \F360-bootloader\F36x_UART_BL_SW\Sample_User_Application\F360_Blinky.obj, C
+>> :\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\Sample_User_Ap
+>> plication\F36x_InfoBlock.obj TO C:\Users\mading\SkyDrive\Work\F360-bootload
+>> er\F36x_UART_BL_SW\Sample_User_Application\Sample_User_Application RS (256)
+>>  PL (68) PW (78) CODE (0X400-0X77FF, ?CO?F36X_INFOBLOCK (0X77F5))
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\Sample_User_Ap
+>> plication\STARTUP.obj (?C_STARTUP)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\Sample_User_Ap
+>> plication\F360_Blinky.obj (F360_BLINKY)
+  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_BL_SW\Sample_User_Ap
+>> plication\F36x_InfoBlock.obj (F36X_INFOBLOCK)
+
+
+LINK MAP OF MODULE:  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UART_B
+>> L_SW\Sample_User_Application\Sample_User_Application (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0400H                  *** GAP ***
+            CODE    0400H     0003H     ABSOLUTE     
+            CODE    0403H     000EH     UNIT         ?PR?PORT_INIT?F360_BLINKY
+>> 
+                    0411H     0001H                  *** GAP ***
+            CODE    0412H     0003H     ABSOLUTE     
+            CODE    0415H     001EH     UNIT         ?PR?_TIMER2_INIT?F360_BLI
+>> NKY
+            CODE    0433H     0014H     UNIT         ?PR?MAIN?F360_BLINKY
+            CODE    0447H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0453H     0005H     UNIT         ?PR?TIMER2_ISR?F360_BLINK
+>> Y
+                    0458H     739DH                  *** GAP ***
+            CODE    77F5H     000BH     UNIT         ?CO?F36X_INFOBLOCK
+
+
+
+OVERLAY MAP OF MODULE:   C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UA
+>> RT_BL_SW\Sample_User_Application\Sample_User_Application (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?F360_BLINKY
+
+?PR?MAIN?F360_BLINKY
+  +--> ?PR?PORT_INIT?F360_BLINKY
+  +--> ?PR?_TIMER2_INIT?F360_BLINKY
+
+
+BL51 BANKED LINKER/LOCATER V6.22            05/13/2013  13:06:25  PAGE 2
+
+
+
+SYMBOL TABLE OF MODULE:  C:\Users\mading\SkyDrive\Work\F360-bootloader\F36x_UA
+>> RT_BL_SW\Sample_User_Application\Sample_User_Application (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0447H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0400H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:044AH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0447H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0400H         LINE#         126
+  C:0447H         LINE#         133
+  C:0449H         LINE#         134
+  C:044AH         LINE#         135
+  C:044BH         LINE#         136
+  C:044DH         LINE#         185
+  C:0450H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        F360_BLINKY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+  C:0453H         PUBLIC        Timer2_ISR
+  B:00A8H.7       PUBLIC        EA
+  D:00A7H         PUBLIC        SFRPAGE
+  D:00AFH         PUBLIC        P3MDOUT
+  B:00C8H.7       PUBLIC        TF2H
+  D:00D9H         PUBLIC        PCA0MD
+  D:00E2H         PUBLIC        XBR1
+  D:00CCH         PUBLIC        TMR2
+  C:0433H         PUBLIC        main
+  C:0415H         PUBLIC        _Timer2_Init
+  D:00C8H         PUBLIC        TMR2CN
+  C:0403H         PUBLIC        PORT_Init
+  D:00CAH         PUBLIC        TMR2RL
+  B:00A8H.5       PUBLIC        ET2
+  B:00B0H.2       PUBLIC        LED
+  B:00C8H.2       PUBLIC        TR2
+  -------         PROC          MAIN
+  C:0433H         LINE#         62
+  C:0433H         LINE#         63
+  C:0433H         LINE#         64
+  C:0436H         LINE#         66
+BL51 BANKED LINKER/LOCATER V6.22            05/13/2013  13:06:25  PAGE 3
+
+
+  C:0439H         LINE#         68
+  C:0440H         LINE#         71
+  C:0442H         LINE#         73
+  C:0445H         LINE#         75
+  -------         ENDPROC       MAIN
+  -------         PROC          PORT_INIT
+  -------         DO            
+  D:0007H         SYMBOL        SFRPAGE_save
+  -------         ENDDO         
+  C:0403H         LINE#         87
+  C:0403H         LINE#         88
+  C:0403H         LINE#         89
+  C:0405H         LINE#         91
+  C:0408H         LINE#         93
+  C:040BH         LINE#         94
+  C:040EH         LINE#         96
+  C:0410H         LINE#         97
+  -------         ENDPROC       PORT_INIT
+  -------         PROC          _TIMER2_INIT
+  D:0006H         SYMBOL        counts
+  -------         DO            
+  D:0005H         SYMBOL        SFRPAGE_save
+  -------         ENDDO         
+  C:0415H         LINE#         112
+  C:0415H         LINE#         113
+  C:0415H         LINE#         114
+  C:0417H         LINE#         116
+  C:041AH         LINE#         118
+  C:041DH         LINE#         120
+  C:0426H         LINE#         121
+  C:042CH         LINE#         123
+  C:042EH         LINE#         125
+  C:0430H         LINE#         127
+  C:0432H         LINE#         128
+  -------         ENDPROC       _TIMER2_INIT
+  -------         PROC          TIMER2_ISR
+  C:0453H         LINE#         143
+  C:0453H         LINE#         145
+  C:0455H         LINE#         146
+  C:0457H         LINE#         147
+  -------         ENDPROC       TIMER2_ISR
+  -------         ENDMOD        F360_BLINKY
+
+  -------         MODULE        F36X_INFOBLOCK
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:77F5H         PUBLIC        TGT_App_InfoBlock
+  -------         ENDMOD        F36X_INFOBLOCK
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?F36X_INFOBLOCK
+
+Program Size: data=9.0 xdata=0 code=98
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

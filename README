@@ -1,0 +1,18 @@
+F360 UART bootloader 
+It contains several parts.
+* Bootloader firmware 
+* PC software application
+* Sample user application code
+
+About bootloader real size, we need to check .M51 file 
+instead of checking project build result output. The 
+reason is there some GAPS interval among vector table. 
+Here is the example:
+In IDE build output windows, we got code size is 947 bytes.
+Program Size: data=75.0 xdata=1024 code=937
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+In .M51 file, we got code size is  0x3E7 = 999 bytes
+
+CODE    03CFH     0011H     INBLOCK      ?PR?SRC_DISP_TGT_INFO?F36X_COMM_UART
+CODE    03E0H     0007H     INBLOCK      ?PR?_TGT_ERASE_PAGE?FXXX_TARGETBL_COMMANDS
+
